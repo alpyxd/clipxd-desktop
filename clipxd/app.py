@@ -237,6 +237,9 @@ def _single_instance():
 
 def main():
     _setup_logging()
+    if "--self-test" in sys.argv:  # arayüzsüz paket doğrulaması (bkz. clipxd/selftest.py)
+        from clipxd.selftest import run
+        sys.exit(run(sys.argv))
     app = create_app()
     server = _single_instance()
     if server is None:

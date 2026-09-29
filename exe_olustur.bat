@@ -7,9 +7,7 @@ if not exist .venv\Scripts\python.exe (
     exit /b 1
 )
 .venv\Scripts\python.exe -m pip install --upgrade pyinstaller || exit /b 1
-.venv\Scripts\python.exe -c "from clipxd.app import write_icon; write_icon('assets/icon.ico')" || exit /b 1
-.venv\Scripts\python.exe -m PyInstaller --noconfirm --windowed --name ClipXD --icon assets\icon.ico ^
-    --collect-data imageio_ffmpeg --collect-all yt_dlp_ejs ClipXD.pyw || exit /b 1
+.venv\Scripts\python.exe packaging\build_release.py || exit /b 1
 echo.
-echo Hazir: dist\ClipXD\ClipXD.exe  (dist\ClipXD klasorunun tamamini birlikte tasiyin)
+echo Hazir: dist\ClipXD\ClipXD.exe ve dist\ClipXD-Desktop-*-win64.zip
 pause
