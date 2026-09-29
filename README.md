@@ -129,3 +129,9 @@ sayfasını, alan adlarını ve oturum çerezi adını ekleyin.
 
 ClipXD, indirme için [yt-dlp](https://github.com/yt-dlp/yt-dlp), dönüştürme için
 [FFmpeg](https://ffmpeg.org), arayüz için [Qt for Python (PySide6)](https://doc.qt.io/qtforpython/) kullanır.
+
+## Lisans
+
+ClipXD Desktop'ın kaynak kodu [MIT lisansı](LICENSE) ile yayımlanır. Kullandığı bileşenlerin kendi
+lisansları vardır (yt-dlp: Unlicense, PySide6/Qt: LGPL-3.0, FFmpeg: LGPL/GPL); özellikle `.exe` paketini
+dağıtırken bu lisansların koşullarına uyulmalıdır.
